@@ -1,11 +1,11 @@
-title : Blog Title
+title : Anydiver Tutorial
 tagline: Blog Tagline
 author :
-  name : Firstname Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Fred Schoeneman
+  email : fred@anydiver.com
+  github : fdschoeneman
+  twitter : fdschoeneman
+  feedburner : 
 
 navigation :
   - archive.html
