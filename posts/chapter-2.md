@@ -5,7 +5,7 @@ description:
 categories:
 tags: []
 
-type: draft
+<!-- type: draft -->
 ---
 
 It should come as no surprise that, as a Ruby on Rails developer, I will choose that as a web development framework.  I'm also using a Dell XPS13 with the developer image of Ubuntu 12.04 installed.  Most of the commands in this tutorial should work fine on Macintosh.  If you are on Windows, I recommend borrowing someone else's machine or downloading Ubuntu and running it on yours.  Here is a good place to start:
