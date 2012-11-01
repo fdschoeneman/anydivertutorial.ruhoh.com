@@ -8,9 +8,9 @@ author :
   feedburner : 
 
 navigation :
-  - archive.html
-  - tags.html
-  - categories.html
-  - pages.html
+  # - archive.html
+  # - tags.html
+  # - categories.html
+  # - pages.html
   - about.md
   
