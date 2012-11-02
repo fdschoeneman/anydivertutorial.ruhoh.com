@@ -5,10 +5,10 @@ description:
 categories:
 tags: []
 
-<!-- type: draft -->
+type: draft
 ---
 
-It should come as no surprise that, as a Ruby on Rails developer, I will choose that as a web development framework.  I'm also using a Dell XPS13 with the developer image of Ubuntu 12.04 installed.  Most of the commands in this tutorial should work fine on Macintosh.  If you are on Windows, I recommend borrowing someone else's machine or downloading Ubuntu and running it on yours.  Here is a good place to start:
+It should come as no surprise that, as a Ruby on Rails developer, I will choose that as a web development framework.  I'm also using a Dell XPS13 with the developer image of Ubuntu 12.04 installed.  Most of the commands in this tutorial should work fine on Macintosh.  If you are on Windows, consider borrowing someone else's machine or downloading Ubuntu and running it on yours.  Here is a good place to start:
 
 http://www.ubuntu.com/download/desktop/windows-installer
 
@@ -16,36 +16,38 @@ Now that you're on a Unix machine, open a terminal.  Bash is fine, though I conv
 
 http://railscasts.com/episodes/308-oh-my-zsh
 
-If you don't know what the terminal is, you may be in the wrong place.  It's cool.  I was there, too.  And you know what really helped me out?  Michael Hartl's excellent Rails Tutorial, which you can find here:
+If you don't know what the terminal is, you may be in the wrong place.  It's cool.  We've all been there.  And you know what really helped me out?  Michael Hartl's excellent Rails Tutorial, which you can find here:
 
 http://ruby.railstutorial.org/ruby-on-rails-tutorial-book
 
-For my text editor I've chosen Sublime Text 2.  There are many text editors and IDE's like it, but this one is mine.  My text editor is my best friend.  It is my life.  I must masterit as I must master my life.  On Ubuntu 12.04 I've found the best way is to add a ppa and let Ubuntu do my work for me.  I recommend starting here:
+There are many text editors and IDE's out there, but Sublime Text 2 is mine.  My text editor is my best friend.  It is my life.  I must master it as I must master my life.  On Ubuntu 12.04 a decemt way to get it is to add a ppa and let Ubuntu do the work for you:
 
 http://www.webupd8.org/2012/06/sublime-text-20-stable-released-ppa.html
 
-Now that your text editor is up and running, you'll want to install Ruby.  The easiest way I've found to do so is via the Ruby Version Manager.  I have found installing RVM to be a bit more of a moving target than other things, and so will leavy you to start here:
+Now that your text editor is up and running, you'll want to install Ruby and Rails.  I recommend following [Daniel Kehoe's](http://daniel.merciboq.com/) insanely detailed and incredibly awesome instructions, which are likely to be up-to-date even when this tutorial is not:
 
-https://rvm.io/rvm/install/
+http://railsapps.github.com/installing-rails.html
 
-Once you've installed RVM, the first thing you'll want to do is install the latest version of Ruby.  For the purposes of this tutorial, I recommend downloading ruby 1.9.3 patch level 194 and setting it as your default ruby.  From your terminal:
+Once you have a good working version of rvm, lets get you on the version of ruby we'll be using for this tutorial:
 
-$ rvm install 1.9.3-p194 --default
+`$ rvm install 1.9.3-p194 --default`
 
-Now let's create a gemset.  I like to create a gemset with the name of the application I'm building combined with the version of rails I'm using.  Since I'm planning on doing this tutorial using Rails 3.2.8, we can create an appropriate gemset like this:
+Now let's create a gemset.  I like to create a gemset with the name of the application I'm building combined with the version of rails I'm using.  Since I'm planning on doing this tutorial using Rails 3.2.8, we will create a gemset like this:
 
-$ rvm use 1.9.3-p194@anydiver328 --create
+`$ rvm use 1.9.3-p194@anydiver328 --create`
 
-Now let's install rails.  Before we do this, let's set up our .gemrc file to ignore ruby documentation when installing gems.  
+Before we install rails, let's make sure our .gemrc file is configured to ignore ruby documentation when installing gems.  
 
-$ subl ~/.gemrc
+`$ subl ~/.gemrc`
 
-This should open a hidden file in your home directory called .gemrc in Sublime.  It should be empty.  In order to save yourself the time it would take to download the documentation, as well as the space you'll need in order to store them.  Don't worry, the online documentation is more than adequate and easier to navigate:
+This command tells sublime to open a hidden file in your home directory called .gemrc.  In order to save yourself time installing gems, you can skip installing unnecessary documentation -- which is best viewed online -- by adding this line to your ~/.gemrc file:
 
-gem: --no-ri --no-rdoc 
+    # ~/.gemrc
 
-Now we can install Rails.  
+    gem: --no-ri --no-rdoc
 
-$ gem install rails -v 3.2.8
+Now let's go back to the terminal and install the Rails 3.2.8 gem into that gemsest:
 
-Whoah.  We've come a long way so far.  Enough for today.  Come back tomorrow.
+`$ gem install rails -v 3.2.8`
+
+That should take care of most of our overhead.  

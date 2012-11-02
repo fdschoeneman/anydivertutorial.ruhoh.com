@@ -30,7 +30,7 @@ Customer validation:
 Fail.  Sophisticated wine drinkers who would like to write reviews are already using other wine reviewing applications like Cellar Tracker.
 
 
-<img src="{{urls.media}}/cd-process.png". size=20%>
+[<img src="{{urls.media}}/cd-process.png" width="600">](http://steveblank.com/)
 
 
 
