@@ -5,7 +5,6 @@ description:
 categories: tutorial
 tags: []
 
-type: draft
 ---
 
 right on.  
