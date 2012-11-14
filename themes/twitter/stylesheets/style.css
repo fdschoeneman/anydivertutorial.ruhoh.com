@@ -82,3 +82,11 @@ html, body {
   border:1px solid #4C964D;
   color:#FFF;
 }
+
+/* code ======================================================== */
+code { padding:2px 4px;
+  color: green;
+  background-color: #f7f7f9;
+  border: 1px 
+  solid #e1e1e8;
+}

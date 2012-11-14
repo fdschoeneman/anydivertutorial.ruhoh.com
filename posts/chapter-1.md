@@ -2,10 +2,9 @@
 title: "Chapter 1: Welcome!"
 date: '2012-10-29'
 description:
-categories:
+categories: tutorial
 tags: []
 
-<!-- type: draft -->
 ---
 
 Welcome to the Anydiver tutorial.  If you've already been through Michael Hartl's excellent [Rails Tutorial](http://ruby.railstutorial.org/), have decided you'd like to use Rails for a new project of your own, have bought into the concept of behavior driven development, and would like to bend your brain in a bit different direction from where it otherwise might have gotten bent, this tutorial may be a good place to spend some time.  It is my hope that you will use some of the ideas found in it not just to build a toy Rails application, but to use Ruby on Rails to build your own business.  I do this not because I pretend to be an expert on either Ruby on Rails or entrepreneurship, but because I want to become a better at both.  Just as taking notes in class can help me remember information in lectures, so will writing down these steps imprint them in my mind; and just as one of the best ways to learn a thing is to force yourself to try to teach that thing, reformulating these concepts so they're clear and simple enough for an intelligent reader to understand will deepen my own understanding.

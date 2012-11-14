@@ -1,7 +1,7 @@
 {{#months}}
   <ul>
   {{#posts?to_posts}}
-    <li><span>{{date}}</span> &raquo; <a href="{{url}}">{{title}}</a></li>
+    <li><a href="{{url}}">{{title}}</a></li>
   {{/posts?to_posts}}
   </ul>
 {{/months}}

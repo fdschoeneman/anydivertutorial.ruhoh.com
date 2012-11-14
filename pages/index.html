@@ -8,9 +8,8 @@ description: get some
 {{# db.posts.collated }}
   {{> chapters_list }}
 {{/ db.posts.collated }}
-<h2>Latest Posts</h2>
 
-{{# posts_latest }}
+<!-- {{# posts_latest }}
 <div class="post">
   <h3 class="title"><a href="{{url}}">{{title}}</a> <span class="date">{{ date }}</span></h3>
 
@@ -21,3 +20,11 @@ description: get some
   </div>
 </div>
 {{/ posts_latest }}
+
+{{#is_active_page }}
+  <li class="active"><a href="{{url}}" class="active">{{title}}</a></li>
+{{/is_active_page}}
+
+{{^is_active_page}}
+  <li><a href="{{url}}">{{title}}</a></li>
+{{/is_active_page }} -->

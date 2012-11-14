@@ -1,11 +1,11 @@
 ---
-title:
+title: "Chapter 3"
 date: '2012-11-01'
 description:
-categories:
+categories: tutorial
 tags: []
 
-type: draft
+type: 
 ---
 
 You can generate a Rails application the hard way, or the easy way.  If you want to do it the easy way, you can take advantage of the work Daniel Kehoe has done with RailsApps to generate your application with a number of pre-rolled goodies.  The name o four application is anydiver, and we are passing the -T option because we don't want to have to remove the test directory later, which we will not be using.  
@@ -148,7 +148,11 @@ And lets get set up with a starter home page and user accounts:
           3)  Home Page, User Accounts
        setup  Enter your selection: 3
 
-Now we can navigate into the application, migrate our database, and start our server, after which we should be able to navigate to localhost:3000 and see something:
+Now we can navigate into the application and see that it has generated a Gemfile for us
+
+
+
+migrate our database, and start our server, after which we should be able to navigate to localhost:3000 and see something:
 
 `$ cd anydiver`
 
@@ -156,8 +160,83 @@ Now we can navigate into the application, migrate our database, and start our se
 
 `$ rails s`
 
-<img src="smiley.gif" alt="Smiley face" height="42" width="42">
+<img src="/assets/media/rails_composer_anydiver.png" width="800">
 
-<img src="/assets/media/starterapp.png" width="500">
+First migrate your database:
 
-Now when you navigate to [localhost:3000](localhost:3000) you should have a running site that will allow you to login or sign up.  Go ahead and play around with the site. 
+`$ bundle exec rake db:migrate`
+
+And when you navigate to [localhost:3000](localhost:3000) you should have a running site that will allow you to login or sign up.  Go ahead and play around with the site if you like.
+
+Heroku
+======
+
+In order to push our application up to Heroku, we'll need to add postgres to the Gemfil in production.  Clean up your Gemfile so it looks like this:
+
+    #Gemfile
+
+    source 'https://rubygems.org'
+
+    gem 'rails', '3.2.8'
+    gem 'jquery-rails'
+    gem "thin", ">= 1.5.0"
+    gem "haml", ">= 3.1.7"
+    gem "bootstrap-sass", ">= 2.1.0.1"
+    gem "sendgrid", ">= 1.0.1"
+    gem "devise", ">= 2.1.2"
+    gem "simple_form", ">= 2.0.4"
+
+    gem "therubyracer", ">= 0.10.2", :group => :assets, :platform => :ruby
+
+    group :assets do
+      gem 'sass-rails',   '~> 3.2.3'
+      gem 'coffee-rails', '~> 3.2.1'
+      gem 'uglifier', '>= 1.0.3'
+    end
+
+    group :development do 
+      gem 'sqlite3'
+      gem "haml-rails", ">= 0.3.5"
+      gem "hpricot", ">= 0.8.6"
+      gem "ruby_parser", ">= 2.3.1"
+      gem "hub", ">= 1.10.2", :require => nil
+    end
+
+    group :test do 
+      gem "turnip", ">= 1.0.0"
+      gem "email_spec", ">= 1.2.1"
+    end
+
+    group :test, :development do 
+    gem "rspec-rails", ">= 2.11.4"
+    gem "factory_girl_rails", ">= 4.1.0" 
+    end
+
+
+    group :production do
+      gem 'pg'
+    end
+
+
+heroku
+======
+
+run bundle to create a Gemfile.lock with the --without production tag
+
+`$ bundle install --without production`
+
+`$ git add .`
+
+`$ git commit -am "configured application for heroku deploy"`
+
+`$ heroku apps:create anydiver --stack cedar`
+
+`$ git push heroku master`
+
+If you have your own domain and want to get it hooped up to heroku:
+
+`$ heroku addons:add zerigo_dns:basic`
+
+`$ heroku domains:add anydiver.com`
+
+`$ heroku domains:add www.anydiver.com`
