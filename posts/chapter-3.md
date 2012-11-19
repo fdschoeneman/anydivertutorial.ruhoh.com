@@ -166,7 +166,11 @@ First migrate your database:
 
 `$ bundle exec rake db:migrate`
 
-And when you navigate to [localhost:3000](localhost:3000) you should have a running site that will allow you to login or sign up.  Go ahead and play around with the site if you like.
+Then create a pair of sample users:
+
+`$ bundle exec rake db:seed`
+
+Now when you navigate to [localhost:3000](localhost:3000) you should have a running site that will allow you to login or sign up.  Go ahead and play around with the site if you like.
 
 Heroku
 ======

@@ -11,7 +11,7 @@ right on.
 
 Generate a Favicon:
 ===================
-Let's generate a favicon the easy way using faviconist and Google web fonts.  You can generate your favicon using whichever font you like.  I'm choosing the Yellowtail font.  I chose a solid black A letter on a transparent background.  I then right click and save it manually into my public directory as public/favicon.ico.  
+Let's generate a favicon the easy waysubl  using faviconist and Google web fonts.  You can generate your favicon using whichever font you like.  I'm choosing the Yellowtail font.  I chose a solid black A letter on a transparent background.  I then right click and save it manually into my public directory as public/favicon.ico.  
 
 Find a template for your views
 ==============================
